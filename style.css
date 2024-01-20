@@ -10,8 +10,10 @@ body {
 
 /* Container for centering content */
 .container {
-    display: inline-block;
+    display: block;
     text-align: left;
+    margin: 0 auto; /* Centers the container */
+    max-width: 800px; /* Optional: Sets a maximum width for the container */
 }
 
 /* Styling for headings and paragraphs */
@@ -21,15 +23,14 @@ h1, p {
 
 /* Styling for the input boxes within the .blank class */
 .blank input[type="text"] {
-    width: 12px;
-    height: 20px;
-    font-size: 14px;
-    border-bottom: 2px solid black;
+    width: 12px; /* Adjusts the width of the input box */
+    height: 20px; /* Adjusts the height of the input box */
+    font-size: 14px; /* Adjusts the size of the input text */
+    border-bottom: 2px solid black; /* Only a bottom border */
     border-top: none;
     border-left: none;
     border-right: none;
-    text-align: center;
+    text-align: center; /* Centers text inside the input box */
     margin: 0;
     padding: 0;
 }
-
