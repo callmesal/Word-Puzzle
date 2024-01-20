@@ -6,6 +6,7 @@ body, html {
     padding: 0;
     width: 100%;
     height: 100%;
+    text-align: center; /* Centers text for the whole page */
 }
 
 /* Container for centering content */
@@ -14,30 +15,30 @@ body, html {
     margin-left: auto;
     margin-right: auto;
     max-width: 800px; /* Adjust as needed */
+    padding: 20px; /* Adds padding inside the container */
 }
 
 /* Styling for headings and paragraphs */
 h1, p {
     color: navy;
-}
-
-/* Optional: If you want to keep paragraphs left-aligned for readability */
-.container p {
-    text-align: center;
-    margin: 0 auto; /* Keeps paragraphs centered in the container */
-    max-width: 800px; /* Adjust as needed */
+    margin-bottom: 20px; /* Adds space below each heading/paragraph */
 }
 
 /* Styling for the input boxes within the .blank class */
 .blank input[type="text"] {
-    width: 12px; /* Adjusts the width of the input box */
-    height: 20px; /* Adjusts the height of the input box */
-    font-size: 14px; /* Adjusts the size of the input text */
-    border-bottom: 2px solid black; /* Only a bottom border */
+    width: 12px;
+    height: 20px;
+    font-size: 14px;
+    border-bottom: 2px solid black;
     border-top: none;
     border-left: none;
     border-right: none;
-    text-align: center; /* Centers text inside the input box */
+    text-align: center;
     margin: 0;
     padding: 0;
+}
+
+/* Styling for form sections for spacing */
+#puzzleSection, #introduction, #unscrambleArea {
+    margin-bottom: 20px; /* Adds space below each section */
 }
