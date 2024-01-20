@@ -1,0 +1,21 @@
+/* Your CSS styles here */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+    margin: 0;
+    padding: 20px;
+}
+/* More CSS styles */
+.blank input[type="text"] {
+    width: 12px; /* Adjusts the width of the input box */
+    height: 20px; /* Adjusts the height of the input box */
+    font-size: 14px; /* Adjusts the size of the input text */
+    border-bottom: 2px solid black;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
