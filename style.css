@@ -23,7 +23,7 @@ h1, p {
 
 /* Optional: If you want to keep paragraphs left-aligned for readability */
 .container p {
-    text-align: left;
+    text-align: center;
     margin: 0 auto; /* Keeps paragraphs centered in the container */
     max-width: 800px; /* Adjust as needed */
 }
