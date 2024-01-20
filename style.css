@@ -1,26 +1,34 @@
-/* Your CSS styles here */
+/* Main body styling */
 body {
-    text-align: center;
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
     line-height: 1.6;
     margin: 0;
     padding: 20px;
+    text-align: center; /* Centers all content */
 }
-/* More CSS styles */
+
+/* Styling for headings and paragraphs */
+h1, p {
+    color: navy;
+}
+
+/* Styling for the input boxes within the .blank class */
 .blank input[type="text"] {
     width: 12px; /* Adjusts the width of the input box */
     height: 20px; /* Adjusts the height of the input box */
     font-size: 14px; /* Adjusts the size of the input text */
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid black; /* Only a bottom border */
     border-top: none;
     border-left: none;
     border-right: none;
-    text-align: center;
+    text-align: center; /* Centers text inside the input box */
     margin: 0;
     padding: 0;
 }
+
+/* Styling for puzzle section and introduction - aligns text to the left */
 #puzzleSection, #introduction {
     display: inline-block;
-    text-align: left;
+    text-align: left; /* Left-aligns text inside these sections */
 }
