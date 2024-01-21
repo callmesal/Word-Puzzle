@@ -38,8 +38,8 @@ h1, p {
     padding: 0;
 }
 
-/* Prevents words with fillable letters from wrapping */
-.blank {
+/* Prevents paragraphs in the puzzle section from wrapping */
+#puzzleSection p {
     white-space: nowrap; /* Prevents the text from wrapping */
 }
 
@@ -47,3 +47,4 @@ h1, p {
 #puzzleSection, #introduction, #unscrambleArea {
     margin-bottom: 20px; /* Adds space below each section */
 }
+
