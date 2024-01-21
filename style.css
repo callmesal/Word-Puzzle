@@ -79,3 +79,24 @@ h1, p {
   display: block;
   margin-top: 1em; /* Adjust as needed */
 }
+
+/* Prevent words from breaking due to input fields */
+.nowrap {
+  display: inline-block; /* Treat the span as a single unbreakable unit */
+  white-space: nowrap; /* Prevent wrapping inside this span */
+}
+
+/* Ensure that inputs do not cause word breaks */
+.blank input[type="text"] {
+  /* Your existing input styles */
+  display: inline-block; /* This will help with treating the input as part of the word */
+  margin: 0;
+  padding: 0 0.2ch;
+  /* Rest of your styles */
+}
+
+/* Fix for the quote attribution being on the same line */
+.puzzleText > p:last-child {
+  display: block; /* This will ensure the quote attribution is on its own line */
+  margin-top: 1em; /* Adds space above the quote attribution */
+}
