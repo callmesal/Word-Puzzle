@@ -7,6 +7,9 @@ body, html {
     width: 100%;
     height: 100%;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /* Container for centering content */
@@ -16,26 +19,35 @@ body, html {
     margin-right: auto;
     max-width: 800px;
     padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 /* Styling for headings and paragraphs */
 h1, p {
-    color: navy;
+    color: #333;
     margin-bottom: 20px;
 }
 
 /* Styling for the input boxes within the .blank class */
 .blank input[type="text"] {
-    width: 12px;
-    height: 20px;
-    font-size: 14px;
-    border-bottom: 2px solid black;
+    width: 20px; /* Increased width for better visibility */
+    height: 30px; /* Increased height for better tap target on mobile */
+    font-size: 16px; /* Larger font size for readability */
+    border-bottom: 2px solid #333;
     border-top: none;
     border-left: none;
     border-right: none;
     text-align: center;
-    margin: 0;
+    margin: 0 2px; /* Add some space between inputs */
     padding: 0;
+    transition: border-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for inputs */
+.blank input[type="text"]:hover {
+    border-bottom-color: navy; /* Change border color on hover */
 }
 
 /* Prevents breaking around inline elements */
@@ -46,5 +58,34 @@ h1, p {
 
 /* Styling for form sections for spacing */
 #puzzleSection, #introduction, #unscrambleArea {
-    margin-bottom: 20px;
+    margin-bottom: 40px; /* Increased bottom margin for better spacing */
+}
+
+/* Styling for the submit button */
+input[type="submit"] {
+    background-color: navy;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for the submit button */
+input[type="submit"]:hover {
+    background-color: darkblue;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+        box-sizing: border-box; /* Include padding in width calculation */
+    }
+
+    .blank input[type="text"] {
+        width: 40px; /* Larger width on small screens for easier interaction */
+    }
 }
