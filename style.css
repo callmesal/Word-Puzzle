@@ -38,13 +38,12 @@ h1, p {
     padding: 0;
 }
 
-/* Prevents paragraphs in the puzzle section from wrapping */
-#puzzleSection p {
-    white-space: nowrap; /* Prevents the text from wrapping */
+/* Targeted nowrap for spans with fillable blanks */
+#puzzleSection p span {
+    white-space: nowrap; /* Prevents the text from wrapping inside the span */
 }
 
 /* Styling for form sections for spacing */
 #puzzleSection, #introduction, #unscrambleArea {
     margin-bottom: 20px; /* Adds space below each section */
 }
-
