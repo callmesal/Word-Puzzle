@@ -10,7 +10,7 @@ body, html {
     align-items: center; /* Ensure vertical centering */
     justify-content: center; /* Ensure horizontal centering */
     text-align: center;
-    background-image: url('https://source.unsplash.com/random/1920x1080?martin-luther-king'); /* Add background image */
+    background-image: url('https://source.unsplash.com/random/1920x1080?martin-luther-king');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
