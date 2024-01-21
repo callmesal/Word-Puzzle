@@ -55,3 +55,7 @@ h1, p {
 #unscrambleArea input[type="text"] {
     margin-bottom: 1em; /* Space between inputs and submit button */
 }
+
+.nowrap {
+    white-space: nowrap;
+}
