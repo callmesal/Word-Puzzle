@@ -38,13 +38,13 @@ h1, p {
     padding: 0;
 }
 
-/* Targeted nowrap for non-breaking spans */
-.nowrap {
-    white-space: nowrap;
+/* Prevents breaking around inline elements */
+.nowrap, .nowrap span, .nowrap input {
+    display: inline-block;
+    vertical-align: top;
 }
 
 /* Styling for form sections for spacing */
 #puzzleSection, #introduction, #unscrambleArea {
     margin-bottom: 20px;
 }
-
