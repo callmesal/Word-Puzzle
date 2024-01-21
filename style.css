@@ -1,82 +1,60 @@
 /* Main body styling */
 body, html {
-    font-family: 'Lato', sans-serif; /* More readable font */
+    font-family: 'Lato', sans-serif;
+    background-color: #f0f0f0;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    text-align: center;
-    background: url('https://source.unsplash.com/featured/?martin-luther-king') no-repeat center center fixed; 
-    background-size: cover; /* Add background image related to MLK */
-    color: white; /* Text color that stands out from the background */
-}
-
-/* Overlay to enhance text readability over the background image */
-.overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Dark overlay with some transparency */
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 /* Container for centering content */
 .container {
-    position: relative;
+    width: 80%;
     max-width: 800px;
+    margin: 20px;
     padding: 20px;
-    z-index: 2; /* Ensure container is above the overlay */
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Styling for headings and paragraphs */
 h1 {
-    font-size: 2.5em;
+    color: #333;
     margin-bottom: 0.5em;
 }
 
 p {
-    font-size: 1.1em;
+    color: #333;
     line-height: 1.6;
+    text-align: justify;
     margin-bottom: 1em;
-    text-align: left; /* Align text to the left for better readability */
-    max-width: 700px; /* Max width for optimal reading line length */
-    margin-left: auto;
-    margin-right: auto;
 }
 
 /* Styling for the form and input boxes */
 form {
-    background: white; /* Background to make form stand out */
-    padding: 20px;
-    border-radius: 8px; /* Rounded corners */
-    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+    background: none;
 }
 
 .blank input[type="text"] {
-    /* Existing styles */
-    margin: 0 4px; /* Slightly more space between inputs */
-    background: #f8f8f8; /* Light background for inputs */
-    color: #333; /* Dark text for contrast */
-    border-radius: 4px; /* Rounded corners for inputs */
+    width: 20px; /* Adjust width to fit single characters */
+    height: 30px;
+    margin: 0 2px; /* Add horizontal spacing */
+    padding: 5px 10px; /* Add padding for better tap targets */
+    font-size: 16px;
+    border: 1px solid #333; /* Define border for clarity */
+    border-radius: 4px;
 }
 
-/* Styling for the submit button */
-input[type="submit"] {
-    /* Existing styles */
-    font-weight: bold; /* Make submit button text bold */
-}
-
-/* Media query for responsive adjustments */
+/* Responsive styling */
 @media (max-width: 768px) {
-    h1 {
-        font-size: 2em; /* Slightly smaller heading on small screens */
-    }
-
-    p {
-        font-size: 1em; /* Slightly smaller paragraph text on small screens */
+    .container {
+        width: 95%;
     }
 }
