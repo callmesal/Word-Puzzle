@@ -1,32 +1,59 @@
 /* Main body styling */
 body, html {
     font-family: 'Lato', sans-serif;
-    background-image: url('https://images.unsplash.com/photo-1557296387-5358ad7997bb?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80');
-    background-size: cover;
-    background-attachment: fixed;
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
-    color: white;
-    text-align: center;
     display: flex;
-    align-items: center;
+    flex-direction: column;
     justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url('https://unsplash.com/photos/a-statue-of-a-man-with-his-arms-crossed-next-to-another-statue-of-a-man-PfIdexi_HbY');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 /* Container for centering content */
 .container {
-    background: rgba(0, 0, 0, 0.7);
-    border-radius: 10px;
-    margin: auto;
-    max-width: 960px;
-    padding: 40px;
     width: 80%;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* ... all other CSS styles ... */
+/* Styling for headings and paragraphs */
+h1 {
+    color: #333;
+    margin-bottom: 0.5em;
+}
+
+p {
+    color: #333;
+    line-height: 1.6;
+    text-align: justify;
+    margin-bottom: 1em;
+}
+
+/* Styling for the form and input boxes */
+form {
+    background: none;
+}
+
+.blank input[type="text"] {
+    width: 20px; /* Adjust width to fit single characters */
+    height: 30px;
+    margin: 0 2px; /* Add horizontal spacing */
+    padding: 5px 10px; /* Add padding for better tap targets */
+    font-size: 16px;
+    border: 1px solid #333; /* Define border for clarity */
+    border-radius: 4px;
+}
 
 /* Responsive styling */
 @media (max-width: 768px) {
