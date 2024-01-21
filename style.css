@@ -55,3 +55,27 @@ h1, p {
 #unscrambleArea input[type="text"] {
     margin-bottom: 1em; /* Space between inputs and submit button */
 }
+
+/* Apply no-wrap to the puzzle text */
+.puzzleText p {
+  white-space: nowrap;
+}
+
+/* Adjust the width of the input fields to fit single characters */
+.blank input[type="text"] {
+  width: 1ch; /* Use 1ch unit to size width according to the zero character */
+  margin: 0 0.2ch; /* Adjust spacing around input fields */
+  /* Rest of your input field styling */
+}
+
+/* Ensure "I Have a Dream" Fill-in-the-Blanks title is larger and bold */
+#introduction p {
+  font-size: larger;
+  font-weight: bold;
+}
+
+/* Make "-Dr. MLK Jr. “Our God is Marching On”" on its own line */
+.puzzleText p:last-child {
+  display: block;
+  margin-top: 1em; /* Adjust as needed */
+}
