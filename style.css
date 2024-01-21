@@ -7,11 +7,10 @@ body, html {
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    align-items: center; /* Ensure vertical centering */
+    justify-content: center; /* Ensure horizontal centering */
     text-align: center;
-    background-image: url('https://source.unsplash.com/random/1920x1080?martin-luther-king'); /* Replace with your desired image URL */
+    background-image: url('https://source.unsplash.com/random/1920x1080?martin-luther-king'); /* Add background image */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -21,9 +20,8 @@ body, html {
 .container {
     width: 80%;
     max-width: 800px;
-    margin: 20px auto;
     padding: 20px;
-    background: rgba(255, 255, 255, 0.9); /* Slightly transparent white */
+    background: rgba(255, 255, 255, 0.9); /* Semi-transparent background */
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
@@ -31,17 +29,14 @@ body, html {
 /* Styling for headings and paragraphs */
 h1, p {
     color: #333;
+    margin-bottom: 0.5em;
 }
 
 /* Styling for the puzzle form and input boxes */
-#puzzleForm {
-    background: none;
-}
-
 .blank input[type="text"] {
-    width: 1.5em; /* Narrower input field for single character */
-    height: 2em;
-    margin: 0 0.2em;
+    width: 1em; /* Reduce width for closer single character fit */
+    height: 1.5em; /* Adjust height for visual balance */
+    margin: 0 0.2em; /* Space out inputs a bit */
     padding: 0.2em;
     font-size: 1em;
     border: 1px solid #333;
@@ -56,7 +51,7 @@ h1, p {
     }
 }
 
-/* Additional styles for unscramble inputs */
+/* Style adjustments for the unscramble inputs */
 #unscrambleArea input[type="text"] {
     margin-bottom: 1em; /* Space between inputs and submit button */
 }
