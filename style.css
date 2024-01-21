@@ -56,47 +56,60 @@ h1, p {
     margin-bottom: 1em; /* Space between inputs and submit button */
 }
 
-/* Apply no-wrap to the puzzle text */
-.puzzleText p {
-  white-space: nowrap;
+/* Main body styling */
+/* ... Your existing styles ... */
+
+/* Container for centering content */
+/* ... Your existing styles ... */
+
+/* Styling for headings and paragraphs */
+/* ... Your existing styles ... */
+
+/* Styling for the puzzle form and input boxes */
+/* ... Your existing styles ... */
+
+/* Responsive styling */
+/* ... Your existing styles ... */
+
+/* Style adjustments for the unscramble inputs */
+/* ... Your existing styles ... */
+
+/* Prevent word breaking at inline input fields */
+.nowrap {
+  display: inline-block; /* Keep the span as a single unit */
+  white-space: nowrap; /* Prevent line breaks within the span */
 }
 
-/* Adjust the width of the input fields to fit single characters */
+/* Style for individual letter inputs to fit single characters */
 .blank input[type="text"] {
-  width: 1ch; /* Use 1ch unit to size width according to the zero character */
-  margin: 0 0.2ch; /* Adjust spacing around input fields */
+  width: 1ch; /* Set the width to the size of one character */
   /* Rest of your input field styling */
 }
 
-/* Ensure "I Have a Dream" Fill-in-the-Blanks title is larger and bold */
+/* Adjust the transparency of the container */
+.container {
+  background: rgba(255, 255, 255, 0.8); /* Increase transparency slightly */
+}
+
+/* Ensure Dr. MLK Jr. quote is on a new line and formatted */
+.puzzleText > p:last-child {
+  display: block; /* Separate block for Dr. MLK Jr. quote */
+  text-align: right; /* Align right if needed or remove if not */
+  margin-top: 1em; /* Separate from the puzzle text */
+}
+
+/* Additional styles for larger screens if needed to control text block width */
+@media (min-width: 992px) {
+  .puzzleText p {
+    max-width: 90%; /* Prevents the text block from becoming too wide */
+    margin-left: auto; /* Centers the text block */
+    margin-right: auto; /* Centers the text block */
+  }
+}
+
+/* Make "I Have a Dream" title larger and bold */
 #introduction p {
-  font-size: larger;
+  font-size: 1.25em; /* Adjust size as needed */
   font-weight: bold;
 }
 
-/* Make "-Dr. MLK Jr. “Our God is Marching On”" on its own line */
-.puzzleText p:last-child {
-  display: block;
-  margin-top: 1em; /* Adjust as needed */
-}
-
-/* Prevent words from breaking due to input fields */
-.nowrap {
-  display: inline-block; /* Treat the span as a single unbreakable unit */
-  white-space: nowrap; /* Prevent wrapping inside this span */
-}
-
-/* Ensure that inputs do not cause word breaks */
-.blank input[type="text"] {
-  /* Your existing input styles */
-  display: inline-block; /* This will help with treating the input as part of the word */
-  margin: 0;
-  padding: 0 0.2ch;
-  /* Rest of your styles */
-}
-
-/* Fix for the quote attribution being on the same line */
-.puzzleText > p:last-child {
-  display: block; /* This will ensure the quote attribution is on its own line */
-  margin-top: 1em; /* Adds space above the quote attribution */
-}
