@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('puzzleForm');
     const unscrambleInputs = document.querySelectorAll('#unscrambleArea input');
     const letterInputs = form.querySelectorAll('.blank input');
+    const correctAnswer = "voting rights act"; // Set the correct answer here
 
     function getCollectedLetters() {
         return Array.from(letterInputs).map(input => input.value || '_').join('');
@@ -28,6 +29,12 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        // Add your logic for when the form is submitted
+        let userAnswer = Array.from(unscrambleInputs).map(input => input.value).join(' ').toLowerCase();
+        if (userAnswer === correctAnswer) {
+            alert("Correct! Well done.");
+        } else {
+            alert("Incorrect. Please try again.");
+        }
     });
 });
+
