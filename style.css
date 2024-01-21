@@ -22,16 +22,6 @@ body, html {
 h1, p {
     color: navy;
     margin-bottom: 20px; /* Adds space below each heading/paragraph */
-h1, p {
-    color: navy;
-    margin-bottom: 20px; /* Adds space below each heading/paragraph */
-}
-
-/* Additional spacing after specific elements */
-#introduction p, /* Space after the introduction paragraph */
-#puzzleForm p:first-of-type, /* Space after the first paragraph in the form */
-#collectedLetters { /* Space after the Collected Letters */
-    margin-bottom: 40px; /* Increase the bottom margin for more space */
 }
 
 /* Styling for the input boxes within the .blank class */
@@ -46,6 +36,11 @@ h1, p {
     text-align: center;
     margin: 0;
     padding: 0;
+}
+
+/* Prevents words with fillable letters from wrapping */
+.blank {
+    white-space: nowrap; /* Prevents the text from wrapping */
 }
 
 /* Styling for form sections for spacing */
