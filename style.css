@@ -1,12 +1,24 @@
 /* Main body styling */
 body, html {
-    font-family: Arial, sans-serif;
-    background-color: #f0f0f0;
+    font-family: 'Lato', sans-serif; /* More readable font */
     margin: 0;
     padding: 0;
     width: 100%;
     height: 100%;
     text-align: center;
+    background: url('https://source.unsplash.com/featured/?martin-luther-king') no-repeat center center fixed; 
+    background-size: cover; /* Add background image related to MLK */
+    color: white; /* Text color that stands out from the background */
+}
+
+/* Overlay to enhance text readability over the background image */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7); /* Dark overlay with some transparency */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -14,78 +26,57 @@ body, html {
 
 /* Container for centering content */
 .container {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    position: relative;
     max-width: 800px;
     padding: 20px;
-    background: #fff;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    z-index: 2; /* Ensure container is above the overlay */
 }
 
 /* Styling for headings and paragraphs */
-h1, p {
-    color: #333;
-    margin-bottom: 20px;
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 0.5em;
 }
 
-/* Styling for the input boxes within the .blank class */
+p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 1em;
+    text-align: left; /* Align text to the left for better readability */
+    max-width: 700px; /* Max width for optimal reading line length */
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Styling for the form and input boxes */
+form {
+    background: white; /* Background to make form stand out */
+    padding: 20px;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Subtle shadow for depth */
+}
+
 .blank input[type="text"] {
-    width: 20px; /* Increased width for better visibility */
-    height: 30px; /* Increased height for better tap target on mobile */
-    font-size: 16px; /* Larger font size for readability */
-    border-bottom: 2px solid #333;
-    border-top: none;
-    border-left: none;
-    border-right: none;
-    text-align: center;
-    margin: 0 2px; /* Add some space between inputs */
-    padding: 0;
-    transition: border-color 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Hover effect for inputs */
-.blank input[type="text"]:hover {
-    border-bottom-color: navy; /* Change border color on hover */
-}
-
-/* Prevents breaking around inline elements */
-.nowrap, .nowrap span, .nowrap input {
-    display: inline-block;
-    vertical-align: top;
-}
-
-/* Styling for form sections for spacing */
-#puzzleSection, #introduction, #unscrambleArea {
-    margin-bottom: 40px; /* Increased bottom margin for better spacing */
+    /* Existing styles */
+    margin: 0 4px; /* Slightly more space between inputs */
+    background: #f8f8f8; /* Light background for inputs */
+    color: #333; /* Dark text for contrast */
+    border-radius: 4px; /* Rounded corners for inputs */
 }
 
 /* Styling for the submit button */
 input[type="submit"] {
-    background-color: navy;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    text-transform: uppercase;
-    border-radius: 4px;
-    cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition for hover effect */
+    /* Existing styles */
+    font-weight: bold; /* Make submit button text bold */
 }
 
-/* Hover effect for the submit button */
-input[type="submit"]:hover {
-    background-color: darkblue;
-}
-
-/* Responsive styling for smaller screens */
-@media (max-width: 600px) {
-    .container {
-        width: 90%;
-        box-sizing: border-box; /* Include padding in width calculation */
+/* Media query for responsive adjustments */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em; /* Slightly smaller heading on small screens */
     }
 
-    .blank input[type="text"] {
-        width: 40px; /* Larger width on small screens for easier interaction */
+    p {
+        font-size: 1em; /* Slightly smaller paragraph text on small screens */
     }
 }
