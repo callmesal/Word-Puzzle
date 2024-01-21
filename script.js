@@ -1,8 +1,8 @@
 document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('puzzleForm');
     const unscrambleInputs = document.querySelectorAll('#unscrambleArea input');
-    const letterInputs = form.querySelectorAll('.blank input');
-    const correctAnswer = "voting rights act"; // Set the correct answer here
+    const letterInputs = document.querySelectorAll('.blank input');
+    const correctAnswer = "voting rights act"; // Correct answer set here
 
     function getCollectedLetters() {
         return Array.from(letterInputs).map(input => input.value || '_').join('');
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     form.addEventListener('submit', function(event) {
         event.preventDefault();
-        let userAnswer = Array.from(unscrambleInputs).map(input => input.value).join(' ').toLowerCase();
+        let userAnswer = Array.from(unscrambleInputs).map(input => input.value.trim()).join(' ').toLowerCase();
         if (userAnswer === correctAnswer) {
             alert("Correct! Well done.");
         } else {
@@ -37,4 +37,5 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 });
+
 
